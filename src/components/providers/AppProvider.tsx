@@ -1,10 +1,15 @@
 import { SessionProvider } from "next-auth/react"
 import { AppThemeProvider } from "@/components"
 
+interface AppProviderProps {
+    children: React.ReactNode;
+    className?: string;
+}
 
-export const AppProvider = ({ children }: { children: React.ReactNode }) => {
+
+export const AppProvider = ({ children, className }: AppProviderProps) => {
     return (
-        <AppThemeProvider>
+        <AppThemeProvider className={className}>
             <SessionProvider>
                 {children}
             </SessionProvider>

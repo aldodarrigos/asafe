@@ -10,14 +10,16 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export function AppThemeProvider({ children }: { children: React.ReactNode }) {
+export function AppThemeProvider({ children, className }: { children: React.ReactNode, className?: string }) {
   const [theme, setTheme] = useState<Theme>('light');
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div data-theme={theme}>
+      <html data-theme={theme} className={`${theme === 'dark' ? 'dark' : ''}`} >
+        <body className={`${className}`}>
         {children}
-      </div>
+        </body>
+      </html>
     </ThemeContext.Provider>
   );
 }

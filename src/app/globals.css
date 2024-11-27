@@ -26,11 +26,18 @@ body {
   }
 }
 
-
 .btn-primary {
-  @apply w-full justify-between bg-gray-800 rounded-md py-3 uppercase font-bold border-zinc-800 hover:bg-gray-900 hover:border-zinc-700 text-white;
+  @apply w-auto justify-between  rounded-md py-2 px-5  font-bold border-zinc-800 dark:hover:bg-gray-200 dark:hover:text-black hover:bg-gray-900 hover:border-zinc-700 text-white;
 }
 
-.btn-disabled{
-  @apply w-full justify-between bg-gray-600 rounded-md py-3 uppercase font-bold;
+.btn-sm {
+  @apply h-7;
+}
+
+.btn-md {
+  @apply h-12;
+}
+
+.btn-disabled {
+  @apply w-full justify-between  rounded-md py-2 px-5 font-bold;
 }

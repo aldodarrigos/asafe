@@ -13,7 +13,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   }: ButtonProps) => {
     return (
       <button 
-        className={`btn btn-${variant} btn-${size} ${className}`}
+        className={`btn btn-${variant} mx-1  bg-gray-800 dark:bg-gray-800 dark:text-white btn-${size} ${className}`}
         onClick={onClick}
         {...props}
       >
