@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { AppMenuSidebar } from "./AppMenuSidebar";
-import { CiHome } from "react-icons/ci";
+import { CiCamera, CiHome } from "react-icons/ci";
 import { IoIosPeople } from "react-icons/io";
 import { GrUserWorker } from "react-icons/gr";
 
@@ -25,9 +25,9 @@ export function AppSidebar({ isOpen, isMobile }: AppSidebarProps) {
                     Dashboard
                 </AppMenuSidebar>
                 <AppMenuSidebar 
-                 icon={<IoIosPeople size={20} className="text-white mr-5"/>}
-                 href="/clients">
-                    Clients
+                 icon={<CiCamera size={20} className="text-white mr-5"/>}
+                 href="/dashboard/photos">
+                    Photos
                 </AppMenuSidebar>
                 <AppMenuSidebar 
                  icon={<GrUserWorker size={20} className="text-white mr-5"/>}

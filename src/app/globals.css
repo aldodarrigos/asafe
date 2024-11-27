@@ -39,5 +39,5 @@ body {
 }
 
 .btn-disabled {
-  @apply w-full justify-between  rounded-md py-2 px-5 font-bold;
+  @apply w-auto cursor-not-allowed justify-between  rounded-md py-2 px-5 font-bold border-zinc-800 dark:hover:bg-gray-200 dark:hover:text-black hover:bg-gray-900 hover:border-zinc-700 text-white;
 }

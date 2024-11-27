@@ -3,3 +3,4 @@ export * from "./AppSidebar";
 export * from "./AppMenuSidebar";
 export * from "./AppToggleTheme";
 export * from "./charts";
+export * from "./table";
