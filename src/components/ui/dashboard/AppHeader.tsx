@@ -5,6 +5,7 @@ import { logout } from "@/actions";
 import { AppThemeToggle } from "./AppToggleTheme";
 import { CiMenuBurger } from "react-icons/ci";
 import { GiCancel } from "react-icons/gi";
+import { useRouter } from "next/navigation";
 
 interface AppHeaderProps {
     title: string;
@@ -19,6 +20,20 @@ export const AppHeader = ({
     onToggleSidebar,
     isMobile = false 
 }: AppHeaderProps) => {
+    const router = useRouter();
+
+    console.log(isMobile);
+    const handleLogout = async () => {
+        try {
+            await logout();
+            router.push('/auth/login');
+        } catch (error) {
+            console.error('Error during logout:', error);
+            router.push('/auth/login');
+        }
+    };
+
+
     return (
         <header className="bg-white dark:bg-gray-900 shadow-md z-50">
             <div className="max-w-8xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
@@ -32,7 +47,6 @@ export const AppHeader = ({
                             onClick={onToggleSidebar}
                             className=""
                         >
-                           
                                 {isSidebarOpen ? (
                                     <GiCancel size={20} />
                                 ) : (
@@ -42,7 +56,7 @@ export const AppHeader = ({
                     ) : (
                         <>
                         <AppThemeToggle />
-                        <AppButton onClick={() => logout()}>
+                        <AppButton onClick={handleLogout}>
                             Logout
                         </AppButton>
                         </>
