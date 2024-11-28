@@ -7,7 +7,6 @@ async function getData() {
     data: [1, 2, 3, 2, 5]
   };
 }
-
 async function getRadarData() {
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
@@ -28,6 +27,7 @@ export const metadata = {
     description: 'Dashboard page'
 }
 
+export const dynamic = 'force-dynamic'
 export default async function DashboardPage() {
   const chartData = await getData();
   const chartData2 = await getRadarData();
