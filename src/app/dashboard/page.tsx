@@ -28,7 +28,6 @@ export const metadata = {
     description: 'Dashboard page'
 }
 
-export const dynamic = 'force-dynamic'
 export default async function DashboardPage() {
   const chartData = await getData();
   const chartData2 = await getRadarData();
