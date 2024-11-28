@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/utils/ResizableBox.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/utils/ResizableBox.js", "src/components/ui/dashboard/table/AppDataTable.tsx___", "cypress/e2e/auth.cy", "__tests__/AppButton.test.jsx", "__tests__/AppButton.test.jsx", "__tests__/dashboard_page.test.jsx"],
   "exclude": ["node_modules"]
 }
