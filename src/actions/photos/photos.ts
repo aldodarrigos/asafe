@@ -6,6 +6,7 @@ export async function getPhotos(
   page: number = 1,
   limit: number = 10
 ): Promise<PhotoResponse> {
+  await new Promise((resolve) => setTimeout(resolve, 2000)); // remove this line :)
   const response = await fetch("https://jsonplaceholder.typicode.com/photos", {
     cache: "force-cache",
   });

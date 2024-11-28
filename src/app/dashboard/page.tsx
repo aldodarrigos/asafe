@@ -1,7 +1,7 @@
 import { AppLineChart, AppBarChart, AppDoughnutChart, AppRadarChart } from "@/components";
 
 async function getData() {
-  await new Promise((resolve) => setTimeout(resolve, 2000)); // Simula delay
+  await new Promise((resolve) => setTimeout(resolve, 2000)); await new Promise((resolve) => setTimeout(resolve, 4000));  // remove this line :)
   return {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
     data: [1, 2, 3, 2, 5]
@@ -9,7 +9,8 @@ async function getData() {
 }
 
 async function getRadarData() {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 2000)); await new Promise((resolve) => setTimeout(resolve, 4000));  // remove this line :)
+
   return {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
     datasets: [{
