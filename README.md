@@ -1,36 +1,251 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ASAFE - Next.js Dashboard Application
 
-## Getting Started
+## Overview
 
-First, run the development server:
+ASAFE is a modern dashboard application built with Next.js 14, featuring authentication, dynamic charts, photo management, and a responsive design with dark/light theme support.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Architecture
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend**: Next.js 14
+- **Authentication**: NextAuth.js
+- **Validation Inputs**: Zod
+- **Theming**: Next themes
+- **Icons**: React Icons
+- **Styling**: Tailwind CSS
+- **Charts**: Chart.js with react-chartjs-2
+- **State Management**: React Hooks
+- **API Integration**: REST API with Next.js API routes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Key Features
 
-## Learn More
+- Server-side and client-side rendering
+- Authentication system with credentials
+- Responsive dashboard with multiple chart types
+- Dynamic theme switching (dark/light mode)
+- Photo management with pagination
+- Mobile-friendly sidebar navigation
 
-To learn more about Next.js, take a look at the following resources:
+### Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+src/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- actions/ # Server actions
+- app/ # Next.js app router pages
+- components/ # Reusable UI components
+- hooks/ # Custom React hooks
+- interfaces/ # TypeScript interfaces
+- styles/ # Global styles and theme
 
-## Deploy on Vercel
+## Prerequisites
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Node.js (v18 or higher)
+- npm or yarn
+- Git
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Installation
+
+1.  Clone the repository
+
+        git clone https://github.com/aldodarrigos/asafe.git
+        cd asafe
+
+2.  Install dependencies
+
+        npm install
+
+3.  Set up environment variables
+
+        cp .env.example .env.local
+
+    Required environment variables:
+
+        NEXTAUTH_URL=http://localhost:3000
+        #openssl rand -base64 32
+        NEXTAUTH_SECRET=your-secret-key
+
+4.  Run the development server
+
+        npm run dev
+
+## Usage
+
+### Development
+
+    npm run dev
+
+### Production Build
+
+    npm run build && npm start
+
+## Authentication
+
+The application uses NextAuth.js for authentication. Default test credentials:
+
+- Email: test@test.com
+- Password: testing
+
+## Features
+
+### Dashboard
+
+- Interactive charts (Line, Bar, Doughnut, Radar)
+- Responsive layout
+- Real-time theme switching
+
+### Photo Management
+
+- Paginated photo gallery
+- Lazy loading images
+- Server-side data fetching
+
+## API Routes
+
+### Photos API
+
+- `GET /api/photos`: Fetch paginated photos
+  - Query parameters:
+    - page (default: 1)
+    - limit (default: 10)
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+Aldo D'Arrigo
+
+## Acknowledgments
+
+- Asafe for the opportunity to demostrate my talent
+- Next.js team for the amazing framework
+- Chart.js for the charting library
+- Tailwind CSS for the styling system
+
+# ASAFE - Next.js Dashboard Application
+
+## Overview
+
+ASAFE is a modern dashboard application built with Next.js 14, featuring authentication, dynamic charts, photo management, and a responsive design with dark/light theme support.
+
+## Architecture
+
+### Tech Stack
+
+- **Frontend**: Next.js 14
+- **Authentication**: NextAuth.js
+- **Validation Inputs**: Zod
+- **Theming**: Next themes
+- **Icons**: React Icons
+- **Styling**: Tailwind CSS
+- **Charts**: Chart.js with react-chartjs-2
+- **State Management**: React Hooks
+- **API Integration**: REST API with Next.js API routes
+
+### Key Features
+
+- Server-side and client-side rendering
+- Authentication system with credentials
+- Responsive dashboard with multiple chart types
+- Dynamic theme switching (dark/light mode)
+- Photo management with pagination
+- Mobile-friendly sidebar navigation
+
+### Project Structure
+
+src/
+
+- actions/ # Server actions
+- app/ # Next.js app router pages
+- components/ # Reusable UI components
+- hooks/ # Custom React hooks
+- interfaces/ # TypeScript interfaces
+- styles/ # Global styles and theme
+
+## Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+- Git
+
+## Installation
+
+1.  Clone the repository
+
+        git clone https://github.com/aldodarrigos/asafe.git
+        cd asafe
+
+2.  Install dependencies
+
+        npm install
+
+3.  Set up environment variables
+
+        cp .env.example .env.local
+
+    Required environment variables:
+
+        NEXTAUTH_URL=http://localhost:3000
+        #openssl rand -base64 32
+        NEXTAUTH_SECRET=your-secret-key
+
+4.  Run the development server
+
+        npm run dev
+
+## Usage
+
+### Development
+
+    npm run dev
+
+### Production Build
+
+    npm run build && npm start
+
+## Authentication
+
+The application uses NextAuth.js for authentication. Default test credentials:
+
+- Email: test@test.com
+- Password: testing
+
+## Features
+
+### Dashboard
+
+- Interactive charts (Line, Bar, Doughnut, Radar)
+- Responsive layout
+- Real-time theme switching
+
+### Photo Management
+
+- Paginated photo gallery
+- Lazy loading images
+- Server-side data fetching
+
+## API Routes
+
+### Photos API
+
+- `GET /api/photos`: Fetch paginated photos
+  - Query parameters:
+    - page (default: 1)
+    - limit (default: 10)
+
+## License
+
+Aldo D'Arrigo
+
+## Acknowledgments
+
+- Asafe for the opportunity to demostrate my talent
+- Next.js team for the amazing framework
+- Chart.js for the charting library
+- Tailwind CSS for the styling system
