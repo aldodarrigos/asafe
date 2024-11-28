@@ -9,7 +9,7 @@ export const metadata = {
   description: 'Dashboard page'
 }
 
-
+export const dynamic = 'force-dynamic'
 export default async function PhotosPage() {
   // const initialData = await getPhotos()
   return (
