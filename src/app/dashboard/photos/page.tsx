@@ -4,10 +4,9 @@ import { AppPhotosTable, AppPhotoTableLoading, PhotosWrapper } from '@/component
 import { Suspense } from 'react';
 
 
-
 export const metadata = {
-  title: 'Photos Dashboard | A-SAFE',
-  description: 'View your photos'
+  title: 'Dashboard | Photos',
+  description: 'Dashboard page'
 }
 
 

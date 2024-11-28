@@ -22,6 +22,11 @@ async function getRadarData() {
   };
 }
 
+export const metadata = {
+    title: 'Dashboard | Home',
+    description: 'Dashboard page'
+}
+
 export default async function DashboardPage() {
   const chartData = await getData();
   const chartData2 = await getRadarData();
