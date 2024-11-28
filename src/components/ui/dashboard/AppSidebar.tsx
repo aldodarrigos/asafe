@@ -53,7 +53,7 @@ export function AppSidebar({ isOpen, isMobile }: AppSidebarProps) {
                             onClick={handleLogout}>
                             Logout
                         </AppMenuSidebar>
-                        <AppThemeToggle />
+                        <AppThemeToggle className="!bg-gray-900 dark:hover:text-white !w-16 mx-0" />
                         </>
                     )
 

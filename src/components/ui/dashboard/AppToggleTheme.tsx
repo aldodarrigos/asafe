@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import { CiCloudMoon, CiCloudSun } from "react-icons/ci";
 import { AppButton } from "@/components";
 
-export function AppThemeToggle() {
+export function AppThemeToggle( {className=''}: {className?: string}) {
     const [mounted, setMounted] = useState(false);
     const { theme, setTheme } = useTheme();
 
@@ -18,7 +18,7 @@ export function AppThemeToggle() {
     return (
         <AppButton
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2"
+            className={`p-2 ${className}`}
             aria-label="Toggle theme"
         >
             {theme === "dark" ? (
