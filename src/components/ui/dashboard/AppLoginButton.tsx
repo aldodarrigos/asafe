@@ -16,8 +16,8 @@ export const AppLoginButton = () => {
         type="submit"
         onClick={handleClick}
         className={ clsx({
-            'btn-primary bg-gray-50 hover:!bg-gray-200 !text-gray-900 dark:bg-gray-900 dark:hover:!bg-gray-800 dark:hover:text-white': !pending,
-            'btn-disabled !bg-gray-400 hover:!bg-gray-400 !text-gray-900 dark:bg-gray-900 dark:hover:!bg-gray-800 dark:hover:text-white': pending
+            'btn-primary bg-gray-50 hover:!bg-gray-200 !text-gray-900 dark:!text-white dark:bg-gray-900 dark:hover:!bg-gray-800 dark:hover:text-white': !pending,
+            'btn-disabled !bg-gray-400 hover:!bg-gray-400 !text-gray-900 dark:!text-white dark:bg-gray-900 dark:hover:!bg-gray-800 dark:hover:text-white': pending
             })
         }
         disabled={pending}
