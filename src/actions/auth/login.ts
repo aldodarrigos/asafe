@@ -8,8 +8,6 @@ export async function authenticate(
   formData: FormData
 ) {
   try {
-    // Simulate a get record from database
-    await new Promise((resolve) => setTimeout(resolve, 1000));
     await signIn("credentials", {
       ...Object.fromEntries(formData.entries()),
       redirect: false,
